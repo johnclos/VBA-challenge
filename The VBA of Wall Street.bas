@@ -86,7 +86,13 @@ Sub VBAChallenge()
             YearlyChange = CloseVal - OpenVal
             
             'Calculate the percent change
-            PercentChange = YearlyChange / OpenVal
+            If OpenVal = 0 Then
+                OpenVal = PercentChange = 0
+                
+            Else
+                PercentChange = YearlyChange / OpenVal
+            
+            End If
             
             ' Add to the total stock volume
             TotalStockVol = TotalStockVol + ws.Cells(i, 7).Value
