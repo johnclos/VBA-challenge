@@ -69,7 +69,6 @@ Sub VBAChallenge()
             End With
 
             First_Ticker_RowNumber = First_Ticker_Row.Row
-            MsgBox (First_Ticker_RowNumber)
             
             ActiveWorkbook.ActiveSheet.Rows(First_Ticker_RowNumber).Select
             
